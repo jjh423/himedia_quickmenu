@@ -1,0 +1,67 @@
+/* font-family: 'Anton', sans-serif;
+font-family: 'Heebo', sans-serif;
+font-family: 'Rubik', sans-serif; */
+
+:root{
+    --hi-font-an : 'Anton', sans-serif;
+    --hi-font: 'Rubik', sans-serif;
+    --hi-font-em: 'Heebo', sans-serif;
+    --hi-active : #1a73e8;
+}
+
+body{
+    font-family: var(--hi-font);
+    font-weight: 100;
+    font-size: 10px;
+    line-height:2;
+}
+li{list-style: 0;}
+a{ color:var(--hi-active); text-decoration: none; }
+
+/* 공통클래스 */
+
+/* 접근성 */
+.hidden{
+    position: absolute; width:0; height:0; overflow: hidden;
+    visibility: hidden;
+    opacity:0;
+}
+button#top.top{
+    position: fixed;
+    background-color: black;
+    color: white;
+    right:0;
+    bottom:0;
+    width:40px;
+    height:40px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+}
+ul#quick{
+    position: fixed;
+    right : 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width:25px;
+}
+ul#quick>li{width:100px; border:0 solid var(--hi-active);
+    width:100px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left:  0;
+    transition: 0.5s;
+}
+ul#quick a{ color: white }
+ul#quick li.yt { background-color: #f00;}
+ul#quick li.tw { background-color: #29a4d9}
+ul#quick li.fb { background-color: #385498}
+ul#quick li.is { 
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(255,30,76,1) 100%);}
+
+
+
+ul#quick>li i{ display: inline-block; width:25px; text-align:center; }
+
+ul#quick li:hover {margin-left:-75px;}
